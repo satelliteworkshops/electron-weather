@@ -6,6 +6,8 @@ const assetsDirectory = path.join(__dirname, 'assets')
 let tray = undefined
 let window = undefined
 
+process.env.GOOGLE_API_KEY = "AIzaSyAjQz5Scgjt8A-n_PKQWjNiYg-ht2gUJts"
+
 // Don't show the app in the doc
 app.dock.hide()
 

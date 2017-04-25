@@ -24,7 +24,8 @@ const getGeoLocation = () => {
 const getWeather = (position) => {
   // FIXME replace with your own API key
   // Register for one at https://developer.forecast.io/register
-  const apiKey = '781969e20c5d295ae9bd8da62df0d3f7'
+  const apiKey = '98cab43abdc8442a64255fc0a9f10b97'
+
 
   const location = `${position.coords.latitude},${position.coords.longitude}`
   console.log(`Getting weather for ${location}`)
