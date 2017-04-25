@@ -1,8 +1,5 @@
 const {ipcRenderer, shell} = require('electron')
 
-let previousWeather = undefined
-let voice = undefined
-
 document.addEventListener('click', (event) => {
   if (event.target.href) {
     // Open links in external browser
@@ -23,7 +20,7 @@ const getGeoLocation = () => {
 
 const getWeather = (position) => {
   // FIXME replace with your own API key
-  // Register for one at https://developer.forecast.io/register
+  // Register for one at https://darksky.net/dev/
   const apiKey = '98cab43abdc8442a64255fc0a9f10b97'
 
 
@@ -84,51 +81,6 @@ const getWindDirection = (direction) => {
   return 'N'
 }
 
-const isWeatherIdeal = (weather) => {
-  // Precipipation is never ideal...
-  if (weather.currently.precipIntensity !== 0) return false
-
-  // Clouds aren't ideal...
-  const cloudCoverPercentange = Math.round(weather.currently.cloudCover * 100)
-  if (cloudCoverPercentange > 30) return false
-
-  // Ideal weather is within 3 degress of the ideal temperature
-  const idealTemperature = 70
-  const feelsLikeTemperature = weather.currently.apparentTemperature
-  return Math.abs(idealTemperature - feelsLikeTemperature) <= 3
-}
-
-const sendNotification = (weather) => {
-  if (!isWeatherIdeal(weather)) return
-
-  // Show notification if it is the first time checking the weather or if it was
-  // previously not ideal but is now ideal
-  if (previousWeather == null || !isWeatherIdeal(previousWeather)) {
-    const summary = weather.currently.summary.toLowerCase()
-    const feelsLike = Math.round(weather.currently.apparentTemperature)
-    let notification = new Notification('Go outside', {
-      body: `The weather is ${summary} and feels like ${feelsLike}° F`
-    })
-
-    // Show window when notification is clicked
-    notification.onclick = () => {
-      ipcRenderer.send('show-window')
-    }
-  }
-}
-
-const speakTheGoodNews = (weather) => {
-  const summary = weather.currently.summary.toLowerCase()
-  const feelsLike = Math.round(weather.currently.apparentTemperature)
-  const utterance = new SpeechSynthesisUtterance(`Go outside! The weather is ${summary} and feels like ${feelsLike} degrees.`)
-  utterance.voice = voice
-  speechSynthesis.speak(utterance)
-}
-
-speechSynthesis.onvoiceschanged = () => {
-  voice = speechSynthesis.getVoices().find((voice) => voice.name === 'Good News')
-}
-
 const updateWeather = () => {
   getGeoLocation().then(getWeather).then((weather) => {
     // Use local time
@@ -142,10 +94,6 @@ const updateWeather = () => {
     previousWeather = weather
   })
 }
-
-// Refresh weather every 10 minutes
-const tenMinutes = 10 * 60 * 1000
-setInterval(updateWeather, tenMinutes)
 
 // Update initial weather when loaded
 document.addEventListener('DOMContentLoaded', updateWeather)

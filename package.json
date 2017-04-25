@@ -1,24 +1,22 @@
 {
   "name": "weathered",
   "productName": "Weathered",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "main": "main.js",
-  "license": "ISC",
+  "license": "MIT",
   "author": "Kevin Sawicki",
   "scripts": {
-    "start": "electron .",
-    "package": "electron-packager ./ --platform=darwin --arch=x64 --out=out --icon=./icon.icns --overwrite"
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kevinsawicki/tray-example.git"
+    "url": "git+https://github.com/satelliteworkshops/electron-weather.git"
   },
   "bugs": {
-    "url": "https://github.com/kevinsawicki/tray-example/issues"
+    "url": "https://github.com/satelliteworkshops/electron-weather/issues"
   },
-  "homepage": "https://github.com/kevinsawicki/tray-example#readme",
+  "homepage": "https://github.com/satelliteworkshops/electron-weather#readme",
   "devDependencies": {
-    "electron-packager": "^7.3.0",
-    "electron-prebuilt": "^1.2.7"
+    "electron-prebuilt": "^1.4.13"
   }
 }
