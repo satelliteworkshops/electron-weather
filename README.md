@@ -1,0 +1,20 @@
+# Welcome to Electron-Weather!
+**This repository houses a series of introductory-to-intermediate exercises to Git familiar with Electron by manipulating and extending a prebuilt weather app.**
+
+## Instructions for Getting Started
+
+- Step One: Fork this repository:
+
+- Step Two: Clone **your forked repository** (located at www.github.com/YOUR_USERNAME/electron-weather) to your Command Line Interface ([Instructions](https://youtu.be/GBRIxmKRPGA?t=16s)):
+
+- Step Three: From your Command Line, make sure to `cd` into the repository that you've just cloned. In this case, `cd electron-weather`
+- Step Four: Checkout to the `electron_setup` branch and follow the instructions in the README.md on that branch.
+
+
+_Below resources to be added_
+## Extended Resources
+
+### Workshop Images
+
+### Next Steps
+
