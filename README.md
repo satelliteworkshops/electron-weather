@@ -2,12 +2,18 @@
 This branch is basic, covering how to launch an Electron app and a brief tour of the current files/structure.
 
 ## Instructions
+Install project dependencies:
 ```sh
-Type npm install to install npm dependencies
-Type npm start
+npm install
 ```
-
-## Next Steps
+Start the app:
 ```sh
-Type `git checkout cross-platform`
+npm start
+```
+## Next Steps
+Close any open files in your text editor to avoid unexpected merge conflicts.
+
+Then:
+```sh
+`git checkout cross-platform`
 ```
