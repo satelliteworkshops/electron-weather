@@ -36,6 +36,9 @@ Uses the [Dark Sky Forecast API](https://developer.forecast.io) as a data source
 - While some Linux distributions come with a version of Git installed, it's often out-of-date. [This guide](https://git-scm.com/download/linux) has recommended commands to install Git with your distribution's preferred package manager.
 
 ### Get familiar with Git commands
+You'll want to know how to [fork](https://help.github.com/articles/fork-a-repo/) and [clone](https://help.github.com/articles/cloning-a-repository/) a Git repository, and how to [check out a branch](https://git-scm.com/docs/git-checkout#git-checkout-emgitcheckoutemltbranchgt).
+
+If you need a refresher, consider [exploring our free on-demand training](https://services.github.com/on-demand/).
 
 ### Install a text editor
 
