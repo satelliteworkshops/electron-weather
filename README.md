@@ -45,6 +45,6 @@ Step Seven: Run npm install, followed by npm start
 
 ## Next Steps
 ```sh
-Close any open files in your text editor to avoid conflicts on a branch change
-Type `git checkout tray-icons`
+Step One: Close any open files in your text editor to avoid conflicts on a branch change
+Step Two: Type `git checkout tray-icons`
 ```
