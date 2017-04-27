@@ -18,9 +18,10 @@ Step Three: While hovering over the app, type CMD + Option + I to open Google De
 Step Four: Quit the process and return to main.js.
 Step Five: Set line 58, resizable, to true, and save.
 Step Six: Relaunch the app to test resizable windows.
-Step Seven: Remove line 93 from index.js, which is causing the error in the console dialog, and save.
-Step Eight: Terminate and relaunch the app.
-Step Nine: Open DevTools again to determine if the console error disappears.
+Step Seven: Open Dev Tools again (CMD + Option + I) and find the error in the console tab.
+Step Eight: Remove line 93 from index.js, which is causing the error in the console dialog, and save.
+Step Nine: Terminate and relaunch the app.
+Step Ten: Open DevTools again to determine if the console error disappears.
 ```
 #### Exercise Three (Major Refactor)
 ```sh
