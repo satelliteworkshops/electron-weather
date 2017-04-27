@@ -1,13 +1,24 @@
 ## Summary
-This branch is basic, covering how to launch an Electron app and a brief tour of the current files/structure.
+This branch dives into how an app renders, makes minor adjustments to become more familiar with the platform, and concludes with a major refactor of the process to show how easy it is to work with NPM.
 
 ## Instructions
+#### Exercise One (Make it Functional)
 ```sh
-Type npm install to install npm dependencies
-Type npm start
+On line 9 of index.html, add: require('./index')
+Commit the change, and test your code.
+  - Close any existing app processes and type npm start from your CLI.
+```
+#### Exercise Two (Basic Manipulation)
+```sh
+On line
+```
+#### Exercise Three (Major Refactor)
+```sh
+
 ```
 
 ## Next Steps
 ```sh
-Type `git checkout cross-platform`
+Close any open files in your text editor to avoid conflicts on a branch change
+Type `git checkout tray-icons`
 ```
