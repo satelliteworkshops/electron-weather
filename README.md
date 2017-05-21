@@ -14,7 +14,7 @@ npm start
 
 #### Exercise Two (Basic Manipulation)
 
-**Step One**: On lines 54 and 55 of main.js, add these two lines of code, then save:
+**Step One**: On lines 51 and 52 of main.js, add these two lines of code, then save:
 ```js
   width: 300,
   height: 450,
@@ -27,7 +27,7 @@ npm start
 
 **Step Four**: Quit the process and return to main.js.
 
-**Step Five**: Set line 59, resizable, to true, and save.
+**Step Five**: Set line 56, resizable, to true, and save.
 ```js
 resizable: true,
 ```

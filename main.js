@@ -9,9 +9,6 @@ let window = undefined
 process.env.GOOGLE_API_KEY = "AIzaSyAjQz5Scgjt8A-n_PKQWjNiYg-ht2gUJts"
 
 
-// Don't show the app in the dock
-app.dock.hide()
-
 app.on('ready', () => {
   createTray()
   createWindow()
@@ -51,6 +48,8 @@ const getWindowPosition = () => {
 
 const createWindow = () => {
   window = new BrowserWindow({
+    
+
     show: false,
     frame: false,
     fullscreenable: false,
