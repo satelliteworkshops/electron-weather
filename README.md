@@ -27,7 +27,7 @@ npm start
 
 **Step Four**: Quit the process and return to main.js.
 
-**Step Five**: Set line 58, resizable, to true, and save.
+**Step Five**: Set line 57, resizable, to true, and save.
 ```js
 resizable: true,
 ```
@@ -70,7 +70,7 @@ npm start
 
 **Step Five**: Return to package.json, and add a comma to the end of line 20.
 ```js
-"electron-prebuilt": "^1.4.13",
+"electron": "^1.6.8",
 ```
 **Step Six**: On line 21, paste the following:
 ```js

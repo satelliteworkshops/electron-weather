@@ -18,5 +18,6 @@
   "homepage": "https://github.com/satelliteworkshops/electron-weather#readme",
   "devDependencies": {
     "electron": "^1.6.8"
+    
   }
 }
