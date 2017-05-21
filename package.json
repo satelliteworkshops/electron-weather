@@ -6,7 +6,7 @@
   "license": "ISC",
   "author": "Kevin Sawicki",
   "scripts": {
-    "start": "electron .",
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
