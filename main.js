@@ -6,8 +6,6 @@ const assetsDirectory = path.join(__dirname, 'assets')
 let tray = undefined
 let window = undefined
 
-// Don't show the app in the doc
-app.dock.hide()
 
 app.on('ready', () => {
   createTray()
