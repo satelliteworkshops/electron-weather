@@ -7,7 +7,6 @@
   "author": "Kevin Sawicki",
   "scripts": {
     "start": "electron .",
-    "package": "electron-packager ./ --platform=darwin --arch=x64 --out=out --icon=./icon.icns --overwrite"
   },
   "repository": {
     "type": "git",
@@ -18,7 +17,6 @@
   },
   "homepage": "https://github.com/kevinsawicki/tray-example#readme",
   "devDependencies": {
-    "electron-packager": "^7.3.0",
     "electron-prebuilt": "^1.2.7"
   }
 }
