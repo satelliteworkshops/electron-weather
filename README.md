@@ -9,5 +9,5 @@ npm install -g electron-packager
 ```
 **Step Two**: Then, from your branch on the CLI, type:
 ```sh
-epi
+electron-packager .
 ```
