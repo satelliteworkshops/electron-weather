@@ -79,6 +79,8 @@ npm start
 **Step Seven**: Install the new dependency and restart the app.
 ```sh
 npm install
+```
+```sh
 npm start
 ```
 
