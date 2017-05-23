@@ -15,5 +15,5 @@ Close any open files in your text editor to avoid unexpected merge conflicts.
 
 Then:
 ```sh
-`git checkout cross-platform`
+git checkout cross-platform
 ```
