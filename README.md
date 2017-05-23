@@ -62,13 +62,19 @@ If you need a refresher, consider [exploring our free on-demand training](https:
   - [Treehouse recommends](http://treehouse.github.io/installation-guides/linux/node-linux.html) installing via [Linuxbrew](http://linuxbrew.sh)
 
 ## Steps for Getting Started
+**Step One**: Fork this repo
+
+**Step Two**:
+```sh
+git clone YOURFORKEDCOPY
 ```
-Step One: Fork this repo
-Step Two: Clone your forked copy to your Command Line
-Step Three: `git checkout electron-setup`
-Step Four: Open up the files in your text editor.
-Step Five: Follow the instructions in the electron-setup branch README.md
+**Step Three**:
+```sh
+git checkout electron-setup
 ```
+**Step Four**: Open your files in your text editor.
+
+**Step Five**: Follow the next instructions in the README.md.
 
 ## End Product
 At the end of all of our exercises, you should have an app that looks similar to this!
