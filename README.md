@@ -85,7 +85,7 @@ npm start
 ## Next Steps
 **Step One**: Close any open files in your text editor to avoid conflicts on a branch change
 
-**Step Two**: Type
+**Step Two**:
 ```sh
-`git checkout tray-icons`
+git checkout packaging
 ```
