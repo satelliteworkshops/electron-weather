@@ -85,9 +85,11 @@ npm start
 ```
 
 ## Next Steps
-**Step One**: Close any open files in your text editor to avoid conflicts on a branch change
+**Step One**: Close any open files in your text editor to avoid conflicts on a branch change.
 
-**Step Two**:
+**Step Two**: Commit any unstaged changes.
+
+**Step Three**:
 ```sh
 git checkout packaging
 ```
