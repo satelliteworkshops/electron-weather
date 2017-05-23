@@ -7,7 +7,14 @@ This branch covers packaging.
 ```sh
 npm install -g electron-packager
 ```
-**Step Two**: Then, from your branch on the CLI, type:
+**Step Two**: Then, from your branch on the CLI:
 ```sh
 electron-packager .
+```
+
+**Step Three**: Commit your changes.
+
+**Step Four**: Switch branches:
+```sh
+git checkout refreshrebuild
 ```
