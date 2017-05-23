@@ -1,91 +1,43 @@
 ## Summary
-This branch dives into how an app renders, makes minor adjustments to become more familiar with the Electron interface, and concludes with a major refactor of the process to show how easy it is to work with NPM.
+This branch sets up refresh functionality when you make changes to the app.
+
+Source: https://github.com/Quramy/electron-connect
 
 ## Instructions
-#### Exercise One (Make it Functional)
-**Step One**: On line 9 of index.html, add:
+#### Exercise One (Work with Gulp)
+**Step One**: Create a gulpfile.js in your repository:
 ```js
- require('./index')
-```
-**Step Two**: Commit the change, and test your code by launching the app.
-```sh
-npm start
-```
+'use strict';
 
-#### Exercise Two (Basic Manipulation)
+var gulp = require('gulp');
+var electron = require('electron-connect').server.create();
 
-**Step One**: On lines 53 and 54 of main.js, add these two lines of code, then save:
+gulp.task('serve', function () {
+
+ // Start browser process
+ electron.start();
+
+ // Restart browser process
+ gulp.watch('app.js', electron.restart);
+
+ // Reload renderer process
+ gulp.watch(['index.js', 'index.html'], electron.reload);
+});
+```
+**Step Two**: On line 10 of the index.html, insert the following:
 ```js
-  width: 300,
-  height: 450,
+require('electron-connect').client.create()
 ```
-**Step Two**: See the app in progress.
+
+**Step Three**: In your CLI, type:
 ```sh
-npm start
+npm install electron-connect save-dev
 ```
-**Step Three**: While hovering over the app, type CMD + Option + I to open Google Dev Tools.
-
-**Step Four**: Quit the process and return to main.js.
-
-**Step Five**: Set line 57, resizable, to true, and save.
-```js
-resizable: true,
-```
-**Step Six**: Relaunch the app to test resizable windows.
 ```sh
-npm start
+npm install gulp
 ```
-**Step Seven**: Open Dev Tools again (CMD + Option + I) and find the error in the console tab.
 
-**Step Eight**: Remove line 93 from index.js, which is causing the error in the console dialog, and save.
-```js
-REMOVE: sendNotification(weather)
-```
-**Step Nine**: Terminate and relaunch the app.
+**Step Four**: Begin the process by typing:
 ```sh
-npm start
-```
-**Step Ten**: Open DevTools again to determine if the console error disappears.
-
-#### Exercise Three (Major Refactor)
-**Step One**: On line 11 of main.js, add the following code chunk:
-
-```js
-  var menubar = require('menubar')
-  var mb = menubar()
-
-  mb.on('ready', function ready () {
-    console.log('app is ready')
-    // your app code here
-  })
-```
-
-**Step Two**: Comment out ALL remaining lines (19 - 95) of code on main.js
-
-**Step Three**: Save. Then launch the app:
-```sh
-npm start
-```
-**Step Four**: Notice the Electron error pop-up.
-
-**Step Five**: Return to package.json, and add a comma to the end of line 20.
-```js
-"electron": "^1.6.8",
-```
-**Step Six**: On line 21, paste the following:
-```js
-"menubar": "^5.2.3"
-```
-**Step Seven**: Install the new dependency and restart the app.
-```sh
-npm install
-npm start
-```
-
-## Next Steps
-**Step One**: Close any open files in your text editor to avoid conflicts on a branch change
-
-**Step Two**: Type
-```sh
-`git checkout tray-icons`
+gulp serve
 ```
