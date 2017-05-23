@@ -12,9 +12,19 @@ npm install -g electron-packager
 electron-packager .
 ```
 
-**Step Three**: Commit your changes.
+**Step Three**: On line 20 of package.json, add a comma:
+```js
+"electron": "^1.6.8",
+```
 
-**Step Four**: Switch branches:
+**Step Four**: On line 21 of package.json, add:
+```js
+"electron-packager": "^8.7.0"
+```
+
+**Step Five**: Commit your changes.
+
+**Step Six**: Switch branches:
 ```sh
 git checkout refreshrebuild
 ```
