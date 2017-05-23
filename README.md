@@ -31,10 +31,10 @@ require('electron-connect').client.create()
 
 **Step Three**: In your CLI, type:
 ```sh
-npm install electron-connect save-dev
+npm install electron-connect --save-dev
 ```
 ```sh
-npm install gulp
+npm install -g gulp
 ```
 
 **Step Four**: Begin the process by typing:
